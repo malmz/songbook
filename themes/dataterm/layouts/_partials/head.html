@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+<meta name="description"
+  content="{{ if .IsHome }}{{ $.Site.Params.Subtitle }}{{ else if .Description}}{{ .Description | plainify }}{{ else }}{{ .Summary | plainify }}{{ end }}">
+<meta name="keywords" content="{{ with .Params.Keywords }}
+{{ delimit . " , " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}">
+{{ with .OutputFormats.Get "rss" -}}
+{{ printf `
+<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{- end }}
+{{ if .Params.noindex -}}
+{{- if or (eq (.Param "noindex") true) (eq (.Param "noindex") "true") -}}
+<meta name="robots" content="noindex">
+{{- end -}}
+{{- else -}}
+<meta name="robots" content="noodp">
+{{- end }}
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="icon" href="{{ " favicon.svg" | absURL }}" type="image/svg+xml">
+<meta name="twitter:card" content="summary">
+{{ partialCached "head/css.html" . -}}

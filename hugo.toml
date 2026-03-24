@@ -1,0 +1,19 @@
+baseURL = 'https://songs.databladet.se'
+locale = 'sv'
+title = 'Cral Sånghäfte'
+theme = 'dataterm'
+mainSections = ['songs']
+
+[[menu.main]]
+
+[outputs]
+home = ['html']
+section = []
+taxonomy = []
+term = []
+
+[security]
+enableInlineShortcodes = true
+
+[markup.goldmark.renderer]
+unsafe = true

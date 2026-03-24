@@ -1,0 +1,249 @@
+/* Flexoki */
+:root {
+  --f-black: #100F0F;
+  --f-paper: #FFFCF0;
+  --f-base-50: #F2F0E5;
+  --f-base-100: #E6E4D9;
+  --f-base-150: #DAD8CE;
+  --f-base-200: #CECDC3;
+  --f-base-300: #B7B5AC;
+  --f-base-400: #9F9D96;
+  --f-base-500: #878580;
+  --f-base-600: #6F6E69;
+  --f-base-700: #575653;
+  --f-base-800: #403E3C;
+  --f-base-850: #343331;
+  --f-base-900: #282726;
+  --f-base-950: #1C1B1A;
+  --f-red-400: #D14D41;
+  --f-red-600: #AF3029;
+  --f-orange-400: #DA702C;
+  --f-orange-600: #BC5215;
+  --f-yellow-400: #D0A215;
+  --f-yellow-600: #AD8301;
+  --f-green-400: #879A39;
+  --f-green-600: #66800B;
+  --f-cyan-400: #3AA99F;
+  --f-cyan-600: #24837B;
+  --f-blue-400: #4385BE;
+  --f-blue-600: #205EA6;
+  --f-purple-400: #8B7EC8;
+  --f-purple-600: #5E409D;
+  --f-magenta-400: #CE5D97;
+  --f-magenta-600: #A02F6F;
+}
+
+:root {
+  --bg: var(--f-paper);
+  --tx: var(--f-black);
+  --tx-muted: var(--f-base-600);
+  --ui: var(--f-base-100);
+}
+
+:root {
+  --messure: 66ch;
+}
+
+body {
+  color: var(--tx);
+  background-color: var(--bg);
+  font-family: "IBM Plex Serif", serif;
+  margin: 2rem 1rem;
+}
+
+header {
+  border-block-end: 1px solid var(--ui);
+  margin-bottom: 1rem;
+}
+
+main {
+  display: flow-root;
+}
+
+footer {
+  border-top: 1px solid var(--ui);
+  margin-top: 1rem;
+}
+
+header,
+main,
+footer {
+  box-sizing: content-box;
+  max-inline-size: var(--messure);
+  margin-inline: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgb(from var(--tx) r g b / 0.8);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+nav {
+  margin-block-end: 1rem;
+
+  &>ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 1rem;
+    margin: 0 0.5rem;
+    padding: 0;
+  }
+}
+
+ul {
+  list-style-type: "♪  ";
+
+  &>li::marker {
+    color: var(--tx-muted);
+  }
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+img,
+figcaption {
+  max-inline-size: var(--messure);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-block-start: 1.6em;
+  margin-block-end: 0.3em;
+}
+
+pre {
+  tab-size: 2;
+  overflow-x: auto;
+  border: 1px solid var(--ui);
+
+  &>code {
+    border: none;
+    padding: 0;
+  }
+}
+
+code {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 80%;
+  border: 1px solid var(--ui);
+  padding: 0 0.3rem;
+}
+
+pre:has(>code) {
+  line-height: 1.25;
+  padding: 0.3rem 0.6rem;
+}
+
+img {
+  margin: 0.3rem;
+}
+
+
+#page-title {
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 1;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-block: 0.75rem;
+}
+
+#document-title {
+  margin-block-end: 1.5em;
+
+  &>h1 {
+    margin-block-end: 0;
+  }
+
+  &>p {
+    margin-block: 0.1em;
+  }
+
+  &>time {
+    color: var(--tx-muted);
+  }
+}
+
+#posts {
+  list-style: none;
+  padding: 0;
+
+  & time {
+    color: var(--tx-muted);
+    margin-inline-end: 0.75rem;
+    font-size: 90%;
+  }
+}
+
+.right {
+  float: right;
+  max-inline-size: 25%;
+}
+
+/* Set some base styles, so it is easy to see */
+.skip-link {
+  position: absolute;
+  top: 0;
+  display: inline-block;
+  /* Ensure the Y position is set to zero and any movement on the transform property */
+  transform: translateY(0);
+  transition: transform 250ms ease-in;
+
+  color: var(--bg);
+  text-decoration-color: rgb(from var(--bg) r g b / 0.8);
+  background-color: var(--tx);
+
+  /* When it is not focused, transform its Y position by its total height, using a negative value, so it hides above the viewport */
+  &:not(:focus) {
+    transform: translateY(-1lh);
+  }
+}
+
+.taxonomy {
+  display: flex;
+  gap: 0.5rem;
+}
+
+ul.tags {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: "#";
+  list-style-position: inside;
+  gap: 1.5rem;
+  text-transform: lowercase;
+  padding: 0;
+  margin: 0;
+
+  &>li::marker {
+    font-size: 85%;
+  }
+}
+
+.content {
+  --minFontSize: 80%;
+  --maxFontSize: 16px;
+  --scaler: 3.5vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+  line-height: 1.4;
+
+  white-space-collapse: collapse;
+  text-wrap: nowrap;
+  overflow-x: auto;
+}

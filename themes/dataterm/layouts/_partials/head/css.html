@@ -1,0 +1,16 @@
+{{- with slice
+(resources.Get "css/base.css")
+(resources.Get "css/ibm-plex-sans.css")
+(resources.Get "css/ibm-plex-serif.css")
+(resources.Get "css/ibm-plex-mono.css")
+(resources.Get "css/syntax.css")
+(resources.Get "css/main.css")
+| resources.Concat "css/styles.css" -}}
+{{- if hugo.IsDevelopment -}}
+<link rel="stylesheet" href="{{ .RelPermalink }}">
+{{- else }}
+{{- with . | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+{{- end }}
+{{- end }}
+{{- end }}

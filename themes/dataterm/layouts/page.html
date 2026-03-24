@@ -1,0 +1,22 @@
+{{ define "main" }}
+<hgroup id="document-title">
+  <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+  {{ with .Param "melody" }}
+  <p><em>Mel: {{ . }}</em></p>
+  {{ end }}
+  {{ with .Param "author" }}
+  <p>
+    <em>Av {{ . }}</em>
+  </p>
+  {{ end}}
+  {{ with .Param "from" }}
+  <p>
+    <em>Ur {{ . }}</em>
+  </p>
+  {{ end}}
+</hgroup>
+<section class="content">
+  {{ .Content }}
+</section>
+{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+{{ end }}

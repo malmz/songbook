@@ -1,0 +1,11 @@
+{{ define "main" }}
+{{ .Content }}
+
+<ul id="songs">
+  {{ range (where site.RegularPages "Section" "in" .Site.MainSections) }}
+  <li>
+    <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
