@@ -1,0 +1,13 @@
+---
+title: Det var i vår ungdom
+---
+
+Alla:  
+Det var i vår ungdoms fagraste vår  
+Vi drack varandra till och vi sade ''Gutår!''  
+Och alla så dricker vi nu N.N. till  
+Solo N.N.:  
+Och N.N. säger inte nej därtill  
+Alla:  
+Ty, det var i vår ungdoms fagraste vår  
+Vi drack varandra till och vi sade ''Gutår!''
