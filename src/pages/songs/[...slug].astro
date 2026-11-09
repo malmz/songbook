@@ -1,0 +1,45 @@
+---
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import Base from "../../layouts/Base.astro";
+
+export async function getStaticPaths() {
+  const songs = await getCollection("songs");
+  return songs.map((song) => ({
+    params: { slug: song.id },
+    props: song,
+    cacheKey: String(song.digest),
+  }));
+}
+type Props = CollectionEntry<"songs">;
+
+const song = Astro.props;
+const { Content } = await render(song);
+---
+
+<Base {...song.data}>
+  <hgroup class="document-title">
+    <h1>{song.data.title}</h1>
+    {
+      song.data.melody && (
+        <p>
+          <em>Mel: {song.data.melody}</em>
+        </p>
+      )
+    }
+    {
+      song.data.author && (
+        <p>
+          <em>Av {song.data.author}</em>
+        </p>
+      )
+    }
+    {
+      song.data.from && (
+        <p>
+          <em>Från: {song.data.from}</em>
+        </p>
+      )
+    }
+  </hgroup>
+  <Content />
+</Base>

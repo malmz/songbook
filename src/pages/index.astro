@@ -1,0 +1,21 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+import { Content } from "./_index.md";
+
+const songs = await getCollection("songs");
+---
+
+<Base>
+  <Content />
+
+  <ul id="songs">
+    {
+      songs.map((song) => (
+        <li>
+          <a href={`/songs/${song.id}`}>{song.data.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</Base>

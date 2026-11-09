@@ -1,0 +1,9 @@
+---
+import { config } from "../consts";
+const { useHeading } = Astro.props;
+const PageTitle = useHeading ? "h1" : "p";
+---
+
+<header>
+  <PageTitle id="page-title"><a href="/">{config.title}</a></PageTitle>
+</header>
