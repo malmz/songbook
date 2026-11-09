@@ -1,8 +1,7 @@
 ---
 title: Spritbolaget
-params:
-  melody: Snickerboa
-  wide: true
+melody: Snickerboa
+wide: true
 ---
 
 Till spritbolaget ränner jag och bankar på dess port.  

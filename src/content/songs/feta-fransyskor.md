@@ -1,7 +1,6 @@
 ---
 title: Feta Fransyskor
-params:
-  melody: Marsche militaire
+melody: Marsche militaire
 ---
 
 Feta fransyskor som svettas om fötterna  

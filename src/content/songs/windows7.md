@@ -1,7 +1,6 @@
 ---
 title: Windows 7
-params:
-  author: Jävlaranamma
+author: Jävlaranamma
 ---
 
 På 1400-talet i Sverige  

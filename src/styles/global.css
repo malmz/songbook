@@ -157,6 +157,10 @@ img {
   margin: 0.3rem;
 }
 
+em {
+  opacity: 0.7;
+}
+
 
 #page-title {
   font-style: italic;

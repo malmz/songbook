@@ -1,8 +1,7 @@
 ---
 title: Livet
-params:
-  melody: Röda kavalleriet
-  from: Chalmersspexet Katarina II, 1959
+melody: Röda kavalleriet
+from: Chalmersspexet Katarina II, 1959
 ---
 
 {{% repris %}}

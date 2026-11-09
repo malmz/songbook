@@ -1,7 +1,6 @@
 ---
 title: Strejk på Pripps
-params:
-  melody: I natt jag drömde
+melody: I natt jag drömde
 ---
 
 I natt jag drömde något som  

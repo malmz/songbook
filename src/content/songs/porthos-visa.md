@@ -1,8 +1,7 @@
 ---
 title: Porthos visa
-params:
-  melody: You Can't Get a Man With a Gun
-  from: KTH:s Bergsspex, De tre musketörerna, 1960
+melody: You Can't Get a Man With a Gun
+from: KTH:s Bergsspex, De tre musketörerna, 1960
 ---
 
 Jag vill börja gasqua

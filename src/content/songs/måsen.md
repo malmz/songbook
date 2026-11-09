@@ -1,7 +1,6 @@
 ---
 title: Måsen
-params:
-  melody: När månen vandrar på fästet blå
+melody: När månen vandrar på fästet blå
 ---
 
 Det satt en mås på en klyvarbom  

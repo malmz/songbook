@@ -1,7 +1,6 @@
 ---
 title: Sista punschvisan
-params:
-  melody: Auld lang syne
+melody: Auld lang syne
 ---
 
 När punschen småningom är slut  

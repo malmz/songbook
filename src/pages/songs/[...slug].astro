@@ -17,7 +17,7 @@ const { Content } = await render(song);
 ---
 
 <Base {...song.data}>
-  <hgroup class="document-title">
+  <hgroup id="document-title">
     <h1>{song.data.title}</h1>
     {
       song.data.melody && (
@@ -41,5 +41,7 @@ const { Content } = await render(song);
       )
     }
   </hgroup>
-  <Content />
+  <section class="content">
+    <Content />
+  </section>
 </Base>

@@ -1,9 +1,8 @@
 ---
 title: The Haskell Song
-params:
-  melody: Man ska ha husvagn
-  author: Joel Hansell
-  wide: true
+melody: Man ska ha husvagn
+author: Joel Hansell
+wide: true
 ---
 
 Jag har prövat nästan alla sätt att koda på  

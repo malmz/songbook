@@ -1,7 +1,6 @@
 ---
 title: Gamla punschvisan
-params:
-  melody: Änkevalsen
+melody: Änkevalsen
 ---
 
 Punschen kommer, punschen kommer  

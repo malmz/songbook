@@ -1,8 +1,7 @@
 ---
 title: Vikingen
-params:
-  melody: When Johnny Comes Marching Home
-  from: E-LTH, Sångarstriden 1981
+melody: When Johnny Comes Marching Home
+from: E-LTH, Sångarstriden 1981
 ---
 
 En viking älskar livets vann  
