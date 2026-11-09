@@ -18,4 +18,4 @@ Då bäres varje viking ut
 Som lik, sej lik  
 Och sen när vi vaknar vi sjunger en bit  
 sen korkar upp Skånes Aquavit  
-{{% repris %}}Skål för alla vikingar som kom hit!{{% /repris %}}
+:repris[Skål för alla vikingar som kom hit!]
